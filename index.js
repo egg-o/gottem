@@ -13,6 +13,8 @@ client.once('ready', () => {
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
+    client.user.setStatus('online');
+    
 	const { commandName } = interaction;
 
 	if (commandName === 'ping') {
