@@ -1,5 +1,5 @@
 // Require the necessary discord.js classes
-const { Client, Intents } = require('discord.js');
+const { Client, Intents, Collection } = require('discord.js');
 const { token } = require('./config.json');
 
 // Create a new client instance
@@ -10,23 +10,28 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
+// client.commands = new Collection();
 
-    client.user.setStatus('online');
+// client.on('interactionCreate', async interaction => {
+// 	if (!interaction.isCommand()) return;
     
-	const { commandName } = interaction;
+// 	const { commandName } = interaction;
 
-	if (commandName === 'ping') {
-		await interaction.reply('Pong!');
-	} else if (commandName === 'server') {
-		await interaction.reply('Server info.');
-	} else if (commandName === 'user') {
-		await interaction.reply('User info.');
-	} else if (commandName === 'crowd') {
-        await interaction.reply(':PogO::PogO::PogO::PogO::PogO::PogO::PogO::PogO:\n:PogO::PogO::PogO::PogO::PogO::PogO::PogO::PogO:\n:PogO::PogO::PogO::PogO::PogO::PogO::PogO::PogO:');
+// 	if (commandName === 'ping') {
+// 		await interaction.reply('Pong!');
+// 	} else if (commandName === 'crowd') {
+//         await interaction.reply(':PogO::PogO::PogO::PogO::PogO::PogO::PogO::PogO:\n:PogO::PogO::PogO::PogO::PogO::PogO::PogO::PogO:\n:PogO::PogO::PogO::PogO::PogO::PogO::PogO::PogO:');
+//     }
+// });
+
+client.on('message', async msg => {
+    if (msg.content === 'crowd') {
+        await msg.reply("who");
+        console.log("pogno");
+    
     }
-});
+    console.log("recieving");
 
+});
 // Login to Discord with your client's token
 client.login(token);
