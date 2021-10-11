@@ -1,0 +1,35 @@
+{
+  "name": "gottem",
+  "version": "1.0.0",
+  "description": "jokes",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egg-o/gottem.git"
+  },
+  "author": "SharonZ",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "node": "^16.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/egg-o/gottem/issues"
+  },
+  "homepage": "https://github.com/egg-o/gottem#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ]
+}
